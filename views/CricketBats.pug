@@ -1,0 +1,25 @@
+extends layout
+
+block content
+  div(class="container-fluid")
+    h1= title
+  - let results=[{Name:"New Balance",Manufacture:"English  Willow",Cost:120.59},{Name:"Sunridges",Manufacture:"Kashmir Willow",Cost:97.89},{Name:"SG",Manufacture:"Soft Ball ",Cost:56.59}]
+    div(class="row")
+      each form,index in results
+        div(class = "col-sm-2  " onclick=`buy(${index})`) #{form.Name}
+        br
+        br
+        br
+        div(class = "col-sm-2" onclick=`buy(${index})`) #{form.Manufacture}
+        br
+        br
+        br
+        div(class = "col-sm-2" onclick=`buy(${index})`) #{form.Cost}
+    script.
+      function buy(itemNo)
+        {
+        alert(`You purchased Item ${itemNo+1}`)
+        }
+
+    
+
