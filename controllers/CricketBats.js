@@ -50,10 +50,9 @@ ${JSON.stringify(req.body)}`)
     try { 
         let toUpdate = await CricketBats.findById( req.params.id) 
         // Do updates of properties 
-        if(req.body.CricketBats_type)  
-               toUpdate.Name = req.body.Name; 
-        if(req.body.cost) toUpdate.cost = req.body.cost; 
-        if(req.body.size) toUpdate.size = req.body.size; 
+        if(req.body.CricketBats_type) toUpdate.Name = req.body.Name; 
+        if(req.body.Manufacture) toUpdate.Manufacture = req.body.Manufacture; 
+        if(req.body.Cost) toUpdate.Cost = req.body.Cost;
         let result = await toUpdate.save(); 
         console.log("Sucess " + result) 
         res.send(result) 
