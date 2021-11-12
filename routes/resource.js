@@ -19,8 +19,7 @@ router.post('/CricketBats', CricketBats_controller.CricketBats_create_post);
 router.delete('/CricketBats/:id', CricketBats_controller.CricketBats_delete); 
  
 // PUT request to update CricketBats. 
-router.put('/CricketBats/:id', 
-CricketBats_controller.CricketBats_update_put); 
+router.put('/CricketBats/:id', CricketBats_controller.CricketBats_update_put); 
  
 // GET request for one CricketBats. 
 router.get('/CricketBats/:id', CricketBats_controller.CricketBats_detail); 
