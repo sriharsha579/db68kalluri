@@ -31,3 +31,15 @@ exports.CricketBats_delete = function(req, res) {
 exports.CricketBats_update_put = function(req, res) { 
     res.send('NOT IMPLEMENTED: CricketBats update PUT' + req.params.id); 
 };
+// VIEWS 
+// Handle a show all view 
+exports.CricketBats_view_all_Page = async function(req, res) { 
+    try{ 
+        theCricketBats = await CricketBats.find(); 
+        res.render('CricketBats', { title: 'CricketBats Search Results', results: theCricketBats }); 
+    } 
+    catch(err){ 
+        res.status(500); 
+        res.send(`{"error": ${err}}`); 
+    }   
+}; 
