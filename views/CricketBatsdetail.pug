@@ -1,0 +1,25 @@
+extends layout 
+ 
+block content 
+  h1= title 
+ 
+  if (toShow == null) 
+    h2 No instance to delete 
+  else
+    - let costumeid = toShow._id 
+    - let costume_Name = toShow.Name 
+    - let costumeManufacture = toShow.Manufacture 
+    - let costumeCost = toShow.Cost 
+    div 
+        div.row 
+        div(class='CricketBatAttr mr-3') CricketBat ID is: 
+        div #{costumeid} 
+        div.row 
+        div(class='CricketBatAttr mr-3') CricketBat Name is: 
+        div #{costume_Name} 
+        div.row 
+        div(class='CricketBatAttr mr-3') CricketBat Manufacture is: 
+        div #{costumeManufacture} 
+        div.row 
+        div(class='CricketBatAttr mr-3') CricketBat Cost is: 
+        div #{costumeCost} 
