@@ -21,12 +21,12 @@ module.exports = router;
 router.get('/detail', CricketBats_controlers.CricketBats_view_one_Page); 
 
 /* GET create costume page */ 
-router.get('/create', CricketBats_controlers.CricketBats_create_Page); 
+router.get('/create',secured, CricketBats_controlers.CricketBats_create_Page); 
 
 /* GET create update page */ 
 router.get('/update',secured,  CricketBats_controlers.CricketBats_update_Page);
 
 /* GET create costume page */ 
-router.get('/delete', CricketBats_controlers.CricketBats_delete_Page); 
+router.get('/delete',secured, CricketBats_controlers.CricketBats_delete_Page); 
  
  
