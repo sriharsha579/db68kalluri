@@ -87,17 +87,17 @@ async function recreateDB(){
   // Delete everything 
   await CricketBats.deleteMany(); 
  
-  let instance1 = new CricketBats({Name:"New Balancet",  Manufacture:"English  Willow", Cost:120.59}); 
+  let instance1 = new CricketBats({Name:"New Balancet",  Manufacture:"English  Willow", Cost:22}); 
   instance1.save( function(err,doc) { 
       if(err) return console.error(err); 
       console.log("First object saved") 
   }); 
-  let instance2 = new CricketBats({Name:"Sunridges",  Manufacture:"Kashmir Willow", Cost:97.89}); 
+  let instance2 = new CricketBats({Name:"Sunridges",  Manufacture:"Kashmir Willow", Cost:21}); 
   instance2.save( function(err,doc) { 
       if(err) return console.error(err); 
       console.log("Second object saved") 
   }); 
-  let instance3 = new CricketBats({Name:"SG",  Manufacture:"Soft Ball", Cost:56.59}); 
+  let instance3 = new CricketBats({Name:"SG",  Manufacture:"Soft Ball", Cost:23}); 
   instance3.save( function(err,doc) { 
       if(err) return console.error(err); 
       console.log("Third object saved") 

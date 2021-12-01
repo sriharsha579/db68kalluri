@@ -17,14 +17,14 @@ block content
     - let actionid = "/resource/CricketBats/" + CricketBatid 
     form(id='CricketBatForm', action= actionid, method="PUT") 
       div.form-group 
-          label.CricketBatAttr(for='CricketBat_type') CricketBat type 
-          input#CricketBat_type(type='text', name='CricketBat_type', value= CricketBat_type ) 
+          label.CricketBatAttr(for='Name') CricketBat Name 
+          input#CricketBat_type(type='text', name='Name', value= CricketBat_type ) 
       div.form-group 
-          label.CricketBatAttr(for='size') CricketBat Cost 
-          input#size(type='text', name='size', value= CricketBatcost ) 
+          label.CricketBatAttr(for='Cost') CricketBat Cost 
+          input#size(type='number', name='Cost', value= CricketBatcost ) 
       div.form-group 
-          label.CricketBatAttr(for='cost') CricketBat size 
-          input#cost(type='number', name='cost', value= CricketBatsize ) 
+          label.CricketBatAttr(for='Manufacture') CricketBat Manufacture 
+          input#cost(type='text', name='Manufacture', value= CricketBatsize ) 
       input(type="submit") 
  
   script. 
